@@ -11,6 +11,7 @@ This is a risk calculator for Deriv Synthetic Indices. It calculates the lot siz
 * Entry price
 * Stop loss price
 * Percentage Risk (%)
+
 The calculator has been implemented by Django Framework.
 Deriv is an online broker that offers CFDs and other derivatives on forex, stocks & indices, cryptocurrencies, commodities, and derived to millions of registered users across the globe.
 
