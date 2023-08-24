@@ -31,4 +31,4 @@ def Indice(request):
         'total_risk': total_risk
     }
 
-    return render(request, 'calculator/home.html', context)
+    return render(request, 'calculator/calculator.html', context)
