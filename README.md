@@ -12,29 +12,28 @@ This is a risk calculator for Deriv Synthetic Indices. It calculates the lot siz
 * Stop loss price
 * Percentage Risk (%)
 
-The calculator has been implemented by Django Framework.
 Deriv is an online broker that offers CFDs and other derivatives on forex, stocks & indices, cryptocurrencies, commodities, and derived to millions of registered users across the globe.
 
 ## Installation
 ### Create a virtual environment.
 * Windows
 ```
-pip install virtualenv
-virtualenv .venv
-.venv/Scripts/activate.bat
+  pip install virtualenv
+  virtualenv .venv
+  .venv/Scripts/activate.bat
 ````
 * Linux
 ```
-sudo apt install python3-virtualenv
-virtualenv .venv
-source .venv/bin/activate
+  sudo apt install python3-virtualenv
+  virtualenv .venv
+  source .venv/bin/activate
 ```
 ### Install Django
 ```
-pip install Django
+  pip install Django
 ```
 ### Start up server
 ```
-python ./Deriv_SI/manage.py runserver
+  python ./Deriv_SI/manage.py runserver
 ```
 The application should be available at http://localhost:8000/ through your browser
