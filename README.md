@@ -1,3 +1,5 @@
-This is the start of the Deriv Project
-This file will be edited later.
-Time to deal with the README.md
+# Deriv-SI_Calculator
+## A risk calculator to calculate the lot size for Deriv's Synthetic Indices.
+
+## About
+This is a risk calculator for Deriv Synthetic Indices. It calculates the lot size required based on these parameters:
