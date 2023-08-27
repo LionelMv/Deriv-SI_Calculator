@@ -32,6 +32,10 @@ Deriv is an online broker that offers CFDs and other derivatives on forex, stock
 ```
   pip install Django
 ```
+### Clone the repository locally
+```
+git clone https://github.com/LionelMv/Deriv-SI_Calculator.git
+```
 ### Start up server
 ```
   python ./Deriv_SI/manage.py runserver
