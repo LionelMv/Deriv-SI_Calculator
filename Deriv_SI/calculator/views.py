@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import SICalculator
 from decimal import Decimal
 from .get_lot import calculate_lot_risk
+from .choices import INSTRUMENTS
 
 
 def Indice(request):
@@ -16,8 +17,9 @@ def Indice(request):
             entry_price = form.cleaned_data['entry_price']
             stop_price = form.cleaned_data['stop_price']
             risk_percent = form.cleaned_data['risk_percent']
-            lowest_allowable_lot_str = form.cleaned_data['vix']
-            lowest_allowable_lot = Decimal(lowest_allowable_lot_str)
+            selected_instrument = form.cleaned_data['vix']
+
+            lowest_allowable_lot = INSTRUMENTS.get(selected_instrument, 0)
 
             lot, num_pips, total_risk = calculate_lot_risk(
                 account_balance, entry_price, stop_price,
