@@ -11,7 +11,8 @@ def calculate_lot_risk(
         num_pips = stop_price - entry_price
 
     risk_allowed_amount = account_balance * (risk_percent / 100)
-    lot = risk_allowed_amount / num_pips
+    lot = Decimal(str(risk_allowed_amount / num_pips))
+    lowest_allowable_lot = Decimal(str(lowest_allowable_lot))
 
     if lot <= lowest_allowable_lot:
         lot = lowest_allowable_lot
