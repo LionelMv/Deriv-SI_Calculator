@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .forms import SICalculator
-from decimal import Decimal
 from .get_lot import calculate_lot_risk
 from .choices import INSTRUMENTS
 
