@@ -1,6 +1,7 @@
 from django import forms
 from .choices import CHOICES
 
+
 class SICalculator(forms.Form):
     vix = forms.ChoiceField(choices=CHOICES, label='Synthetic Index')
     account_balance = forms.DecimalField(
