@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import SICalculator
 from .get_lot import calculate_lot_risk
-from .choices import INSTRUMENTS
+from .choices import INSTRUMENTS, CHOICES
 
 
 def Indice(request):
@@ -33,3 +33,24 @@ def Indice(request):
     }
 
     return render(request, 'calculator/calculator.html', context)
+
+# def render_instruments_table(instruments):
+#     # Define the table header
+#     table_html = '<table><tr><th>Instrument</th><th>Value (lowest lot)</th></tr>'
+    
+#     # Loop through the instruments and add them to the table
+#     for instrument, value in instruments.items():
+#         table_html += f'<tr><td>{CHOICES[instrument]}</td><td>{value}</td></tr>'
+    
+#     # Close the table tag
+#     table_html += '</table>'
+    
+#     return table_html
+
+def about(request):
+    my_dict = {}
+    for choice in CHOICES[1:]:
+        my_dict[choice[1]] = INSTRUMENTS[choice[0]]
+
+    context = {'my_dict': my_dict}
+    return render(request, 'calculator/about.html', context)
