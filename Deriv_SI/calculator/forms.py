@@ -1,9 +1,3 @@
-"""
-This module defines a Django form class 'SICalculator'
-used for input validation and handling
-in the Synthetic Indices Risk Calculator application.
-"""
-
 from django import forms
 from .choices import CHOICES
 
