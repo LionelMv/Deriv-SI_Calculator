@@ -1,8 +1,30 @@
+"""
+This module defines a Django form class 'SICalculator'
+used for input validation and handling
+in the Synthetic Indices Risk Calculator application.
+"""
+
 from django import forms
 from .choices import CHOICES
 
 
 class SICalculator(forms.Form):
+    """
+    SICalculator class that provides input validation and handling of forms,
+    in the Synthetic Indices Risk Calculator application.
+
+    Attributes:
+        vix (ChoiceField): A dropdown field for selecting a synthetic index
+            from a list of choices provided by 'CHOICES'.
+        account_balance (DecimalField): A decimal field for entering
+            the account balance in USD, with a minimum value of 1.
+        entry_price (DecimalField): A decimal field for entering
+            the entry price.
+        stop_price (DecimalField): A decimal field for entering
+            the stop price.
+        risk_percent (DecimalField): A decimal field for entering
+            the percentage risk (0 - 100).
+    """
     vix = forms.ChoiceField(choices=CHOICES, label='Synthetic Index')
     account_balance = forms.DecimalField(
         label='Account Balance (USD)',
