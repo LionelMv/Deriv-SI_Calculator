@@ -1,3 +1,31 @@
+"""
+This module defines two related data structures:
+- CHOICES: A list of tuples containing instrument choices for a dropdown menu.
+Each tuple consists of a value and a display label.
+- INSTRUMENTS: A dictionary that maps instrument values to their
+corresponding lowest allowable lot values.
+
+CHOICES is used to populate a dropdown menu in a web application,
+allowing users to select a specific instrument.
+
+INSTRUMENTS is used to associate each instrument value
+with its lowest allowable lot size, providing data for risk calculations
+based on user selections.
+
+The data in these structures is used in the application
+to facilitate instrument selection and risk calculation processes.
+
+Example Usage:
+- CHOICES: ('b1000', 'Boom 1000 Index') is an option in the dropdown where
+'b1000' is the value and 'Boom 1000 Index' is the display label.
+- INSTRUMENTS: 'b1000': 0.2 indicates that 'b1000' instrument
+has a lowest allowable lot size of 0.2.
+
+These structures help in providing a user-friendly interface and data integrity
+for the Synthetic Indices Risk Calculator application.
+"""
+
+
 CHOICES = [
     ('', 'Choose from dropdown'),
     ('b1000', 'Boom 1000 Index'),
