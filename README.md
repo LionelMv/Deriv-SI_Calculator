@@ -36,7 +36,7 @@ Python3 and pip should be installed in your system.
 ```
 ### Clone the repository locally
 ```
-git clone https://github.com/LionelMv/Deriv-SI_Calculator.git
+git clone https://github.com/LionelMv/SI_Risk_Calculator.git
 ```
 ### Start up server
 ```
