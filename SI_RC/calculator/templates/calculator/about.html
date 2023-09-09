@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--{% load static %}-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'calculator/style2.css' %}">
+    <title>How to Use</title>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="../">Home</a>
+      </div>
+    <div class="container">
+        <div class="header">
+            <h1>How to Use Synthetic Indices Risk Calculator</h1>
+        </div>
+        <div class="introduction">
+            <h2>About Deriv and the Risk Calculator</h2>
+            <p>Welcome to the Synthetic Indices Position Size Risk Calculator!<br><br>
+                Deriv is an online broker that offers CFDs and other derivatives on forex, stocks & indices, cryptocurrencies, commodities, and derived to millions of registered users across the globe. To access their website you can click on this link: <a href="https://deriv.com/">Deriv website</a><br>
+                This calculator is a powerful tool designed to help traders make informed decisions by calculating risk and lot sizes for different volatility instruments.
+            </p>
+        </div>
+
+        <div class="getting-started">
+            <h2>Getting Started</h2>
+            <p>
+                To use the Deriv Risk Calculator, follow these steps:
+            </p>
+            <ol>
+                <li>Navigate to the <a href="../">Risk Calculator tool.</a></li>
+                <li>Select the instrument you want to calculate risk for from the dropdown menu.</li>
+                <li>Enter the required data, including Account Balance, Entry Price, Stop Price, and Risk Percent.</li>
+                <li>Click the "Calculate" button to get your risk calculation results.</li>
+            </ol>
+        </div>
+
+        <div class="example-calculation">
+            <h2>Example Calculation</h2>
+            <div class="diagram">
+                <img src="{% static 'calculator/images/v501s_mt5.png' %}" alt="Getting Started Image" width="900" height="500">
+            </div>
+            <div class="caption">
+                <caption>Image: Volatility v50 (1s) MT5 snapshot</caption>
+            </div>
+            <div class="diagram">
+                <img src="{% static 'calculator/images/v501s_tdv.png' %}" alt="Getting Started Image" width="900" height="500"
+            </div>
+            <div class="caption">
+                <caption>Image: Volatility v50 (1s) Tradingview snapshot</caption>
+            </div>
+            <div class="example-info">
+                <p>Let's walk through an example calculation for the above trade on "Volatility v50 (1s)" instrument:</p>
+                <ol class="tabbing">
+                    <li>Select "Volatility v50 (1s)" from the dropdown menu.</li>
+                    <li>Enter the following data:</li>
+                    &nbsp;&nbsp;&nbsp; Account Balance (USD) = 1,000<br>
+                    &nbsp;&nbsp;&nbsp; Entry Price = 571734.33<br>
+                    &nbsp;&nbsp;&nbsp; Stop Price = 568355.52<br>
+                    &nbsp;&nbsp;&nbsp; Risk Percent (%) = 1<br>
+                    <li>Click "Calculate" to see the results as below:</li>
+                    &nbsp;&nbsp;&nbsp; Lot size = 0.005<br>
+                    &nbsp;&nbsp;&nbsp; Stop loss = 3378.81 pips<br>
+                    &nbsp;&nbsp;&nbsp; Money at risk (USD) = 16.89<br>
+                </ol>
+                <p><br>A 1% risk is $10 but that would mean a lower lot than 0.005 for the stop size. Since 0.005 is the least lot in Volatility v50 (1s), the calculator gives you the lowest lot for the pair and gives you the risk which is of course higher than 1%.<br>
+                However, if you had a bigger account, say a $2000 account then the lot size will be 0.006 and the money at risk (USD) will be $20 which is 1% of your account.See the diagrams below:</p>
+            </div>
+            <div class="diagram">
+                <img src="{% static 'calculator/images/v501s_results.png' %}" alt="Volatility 50 (1s) results">
+            </div>
+            <div class="caption">
+                <caption>Image: Smaller account result</caption>
+            </div>
+            <div class="diagram">
+                <img src="{% static 'calculator/images/v501s_results2.png' %}" alt="Volatility 50 (1s) results">
+            </div>
+            <div class="caption">
+                <caption>Image: Larger account result</caption>
+            </div>
+        </div>
+        <div class="table-lot">
+            <h2>Instruments and Lowest Lots</h2>
+            <p>This table provides a reference for the lowest lots for each Instrument:</p>
+            <table>
+                <tr>
+                    <th>Instrument</th>
+                    <th>Lowest Lot</th>
+                </tr>
+                {% for k,v in my_dict.items %}
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>{{ v }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <footer>
+            <p>&copy; 2023 Synthetic Indices Risk Calculator</p>
+        </footer>
+    </div>
+</body>
+
+</html>
