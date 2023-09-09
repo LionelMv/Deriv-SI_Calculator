@@ -40,7 +40,7 @@ git clone https://github.com/LionelMv/SI_Risk_Calculator.git
 ```
 ### Start up server
 ```
-  python ./Deriv_SI/manage.py runserver
+  python ./SI_RC/manage.py runserver
 ```
 The application should be available at http://localhost:8000/ through your browser
 
