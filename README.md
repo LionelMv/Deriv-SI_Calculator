@@ -1,11 +1,11 @@
-# Deriv-SI_Calculator
+# Synthetic_Indices_Calculator
 #### A risk calculator to calculate the lot size for Deriv's Synthetic Indices.
 
 ![image](https://github.com/LionelMv/Deriv-SI_Calculator/assets/102690076/51cf7c51-5b1c-436d-8d8b-94391ff0260f)
 
 
 ## About
-This is a risk calculator for Deriv Synthetic Indices. It calculates the lot size required based on these parameters:
+This is a risk calculator for Deriv's Synthetic Indices. It calculates the lot size, number of pips and the total risk (USD) for a user's trade based on these parameters:
 * The pair chosen.
 * Account Balance
 * Entry price
@@ -15,6 +15,8 @@ This is a risk calculator for Deriv Synthetic Indices. It calculates the lot siz
 Deriv is an online broker that offers CFDs and other derivatives on forex, stocks & indices, cryptocurrencies, commodities, and derived to millions of registered users across the globe.
 
 ## Installation
+### Prerequisites
+Python3 and pip should be installed in your system.
 ### Create a virtual environment.
 * Windows
 ```
@@ -41,3 +43,7 @@ git clone https://github.com/LionelMv/Deriv-SI_Calculator.git
   python ./Deriv_SI/manage.py runserver
 ```
 The application should be available at http://localhost:8000/ through your browser
+
+## Authors
+* Lionel Mwangi, [LinkedIn](https://www.linkedin.com/in/lionelmwangi/)
+* Rose Njeri, [LinkedIn](https://www.linkedin.com/in/rose-njeri-558732228)
