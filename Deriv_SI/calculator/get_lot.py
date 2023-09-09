@@ -24,7 +24,7 @@ def calculate_lot_risk(
         risk_percent (Decimal): The percentage of risk (0 - 100)
             for the trading position.
         lowest_allowable_lot (Decimal): The lowest allowable lot size
-            for the selected instrument.
+            for the selected instrument (set by Deriv).
 
     Returns:
         tuple: A tuple containing three Decimal values in the following order:
@@ -33,15 +33,19 @@ def calculate_lot_risk(
             - Total risk in USD for the trading position.
     """
 
+    # Catering for negative values.
     if entry_price > stop_price:
         num_pips = entry_price - stop_price
     else:
         num_pips = stop_price - entry_price
 
+    # The risk in USD the user wants to risk for the trade.
     risk_allowed_amount = account_balance * (risk_percent / 100)
-    lot = Decimal(str(risk_allowed_amount / num_pips))
-    lowest_allowable_lot = Decimal(str(lowest_allowable_lot))
 
+    # Getting the ideal lot size for the trade.
+    lot = Decimal(str(risk_allowed_amount / num_pips))
+
+    lowest_allowable_lot = Decimal(str(lowest_allowable_lot))
     if lot <= lowest_allowable_lot:
         lot = lowest_allowable_lot
         total_risk = num_pips * lowest_allowable_lot
