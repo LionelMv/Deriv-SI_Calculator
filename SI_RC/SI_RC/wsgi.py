@@ -1,5 +1,5 @@
 """
-WSGI config for Deriv_SI project.
+WSGI config for SI_RC project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Deriv_SI.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SI_RC.settings')
 
 application = get_wsgi_application()

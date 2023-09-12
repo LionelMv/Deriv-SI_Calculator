@@ -1,5 +1,5 @@
 """
-ASGI config for Deriv_SI project.
+ASGI config for SI_RC project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Deriv_SI.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SI_RC.settings')
 
 application = get_asgi_application()

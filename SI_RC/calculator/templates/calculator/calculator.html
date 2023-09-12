@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'calculator/style.css' %}">
+  <title>SI Calculator</title>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="/about">How to Use</a>
+  </div>
+  <h1>Synthetic Indices Position Size Calculator</h1>
+  <div class="entries">
+    <form method="post">
+      {% csrf_token %}
+      <div class="col">
+        <label class="e_label" for="{{ form.vix.id_for_label }}">Synthetic Index</label>
+        {{ form.vix }}
+      </div>
+      <div class="col">
+        <label class="e_label" for="{{ form.account_balance.id_for_label }}">Account Balance (USD)</label>
+        {{ form.account_balance }}
+      </div>
+      <div class="col_esp">
+        <div class="esp">
+          <label class="e_label" for="{{ form.entry_price.id_for_label }}">Entry Price:</label>
+          {{ form.entry_price }}
+        </div>
+        <div class="esp">
+          <label class="e_label" for="{{ form.stop_price.id_for_label }}">Stop Price:</label>
+          {{ form.stop_price }}
+        </div>
+      </div>
+      <div class="col">
+        <label class="e_label" for="{{ form.risk_percent.id_for_label }}">Percentage Risk (%):</label>
+        {{ form.risk_percent }}
+      </div>
+      <div class="col">
+        <input type="submit" value="Calculate">
+      </div>
+    </form>
+  </div>
+  <!-- Display results only when calculations are available -->
+  {% if lot or num_pips or total_risk %}
+  <div class="resp" style="visibility: visible;">
+    <div class="r_sect">
+      <div class="r_label">Lots</div>
+      <div class="r_result">
+        {% if lot %}
+        <p>{{ lot }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="r_sect">
+      <div class="r_label">Stop Loss (pips)</div>
+      <div class="r_result">
+        {% if num_pips %}
+        <p>{{ num_pips }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="r_sect">
+      <div class="r_label">Money at risk (USD)</div>
+      <div class="r_result">
+        {% if total_risk %}
+        <p>{{ total_risk }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <script>
+    // JavaScript function to clear form fields on page load/refresh
+    function clearFormFields() {
+      document.getElementById('id_vix').value = '';
+      document.getElementById('id_account_balance').value = '';
+      document.getElementById('id_entry_price').value = '';
+      document.getElementById('id_stop_price').value = '';
+      document.getElementById('id_risk_percent').value = '';
+    }
+
+    // Check if the page is loaded for the first time or refreshed
+    if (performance.navigation.type === 1) { // 1 represents TYPE_RELOAD
+      window.onload = function() {
+        clearFormFields();
+        document.querySelector('.resp').style.visibility = 'hidden'; // Show the "resp" div
+      };
+    }
+  </script>
+</body>
+
+</html>
