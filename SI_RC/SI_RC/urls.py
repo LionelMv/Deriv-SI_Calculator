@@ -1,5 +1,5 @@
 """
-URL configuration for Deriv_SI project.
+URL configuration for SI_RC project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
