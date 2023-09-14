@@ -44,6 +44,9 @@ git clone https://github.com/LionelMv/SI_Risk_Calculator.git
 ```
 The application should be available at http://localhost:8000/ through your browser
 
+### How to use the app
+Check out this link: https://www.iatlion.tech/calculator/about/
+
 ## Authors
 * Lionel Mwangi, [LinkedIn](https://www.linkedin.com/in/lionelmwangi/)
 * Rose Njeri, [LinkedIn](https://www.linkedin.com/in/rose-njeri-558732228)
