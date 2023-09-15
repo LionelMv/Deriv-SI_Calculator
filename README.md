@@ -1,4 +1,4 @@
-# Synthetic_Indices_Calculator
+# Synthetic Indices Position Size Calculator
 #### A risk calculator to calculate the lot size for Deriv's Synthetic Indices.
 
 ![image](https://github.com/LionelMv/Deriv-SI_Calculator/assets/102690076/51cf7c51-5b1c-436d-8d8b-94391ff0260f)
@@ -12,7 +12,7 @@ This is a risk calculator for Deriv's Synthetic Indices. It calculates the lot s
 * Stop loss price
 * Percentage Risk (%)
 
-Deriv is an online broker that offers CFDs and other derivatives on forex, stocks & indices, cryptocurrencies, commodities, and derived to millions of registered users across the globe.
+[Deriv](https://deriv.com/) is an online broker that offers CFDs and other derivatives on forex, stocks & indices, cryptocurrencies, commodities, and derived to millions of registered users across the globe.
 
 ## Installation
 ### Prerequisites
@@ -31,6 +31,7 @@ Python3 and pip should be installed in your system.
   source .venv/bin/activate
 ```
 ### Install Django
+(Django version == 4.2.4)
 ```
   pip install Django
 ```
