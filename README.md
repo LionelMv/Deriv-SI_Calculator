@@ -46,7 +46,7 @@ git clone https://github.com/LionelMv/SI_Risk_Calculator.git
 The application should be available at http://localhost:8000/ through your browser
 
 ### How to use the app
-Check out this link: https://www.iatlion.tech/calculator/about/
+Check out this link: [About Page](https://www.iatlion.tech/calculator/about/)
 
 ## The Story
 Most professional traders always manage their risk for every trade position they enter be it in stocks, forex and even other investments. Synthetic Indices' trading is not any different.
