@@ -59,9 +59,7 @@ def about(request):
         HttpResponse: An HTTP response containing the "How to Use" page.
     """
 
-    my_dict = {}
-    for choice in CHOICES[1:]:
-        my_dict[choice[1]] = INSTRUMENTS[choice[0]]
+    my_dict = {choice[1]: INSTRUMENTS.get(choice[0]) for choice in CHOICES[1:]}
 
     context = {'my_dict': my_dict}
     return render(request, 'calculator/about.html', context)
