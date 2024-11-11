@@ -59,24 +59,8 @@ def about(request):
         HttpResponse: An HTTP response containing the "How to Use" page.
     """
 
-    my_dict = {}
-    for choice in CHOICES[1:]:
-        my_dict[choice[1]] = INSTRUMENTS[choice[0]]
+    my_dict = my_dict = {choice[1]: INSTRUMENTS.get(choice[0])
+                         for choice in CHOICES[1:]}
 
     context = {'my_dict': my_dict}
     return render(request, 'calculator/about.html', context)
-
-# def render_instruments_table(instruments):
-#     # Define the table header
-#     table_html = '<table><tr><th>Instrument</th><th>Value/
-#                   (lowest lot)</th></tr>'
-
-#     # Loop through the instruments and add them to the table
-#     for instrument, value in instruments.items():
-#         table_html += f'<tr><td>{CHOICES[instrument]}/
-#                        </td><td>{value}</td></tr>'
-
-#     # Close the table tag
-#     table_html += '</table>'
-
-#     return table_html
