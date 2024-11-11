@@ -57,11 +57,7 @@ pip install -r ./SI_RC/requirements.txt
 python ./SI_RC/manage.py runserver
 ```
   
-The application should be available at http://localhost:8000/calculator through your browser
-
-### How to use the app
-
-Check out this link: [About Page](https://www.iatlion.tech/calculator/about/)
+The application should be available at ```http://localhost:8000/``` through your browser.
 
 ## The Story
 
