@@ -50,7 +50,11 @@ Python3 and pip should be installed in your system.
 ```
 pip install -r ./SI_RC/requirements.txt
 ```
-  
+
+### Reaname ENVAMPLE
+Rename ```ENVSAMPLE``` file to ```.env```.
+**Note:** The ```.env``` file should only be used during development and not during production.
+
 ### Start up server
   
 ```
