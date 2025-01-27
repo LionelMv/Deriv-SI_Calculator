@@ -95,4 +95,4 @@ If an error occurs (e.g., invalid input data), the API will return a 400 Bad Req
 
 ---
 
-This documentation should any developers integrate and use the API effectively. COntact me if you'd like any additional information added!
+This documentation should help any developers integrate and use the API effectively. Contact me if you'd like any additional information added!
